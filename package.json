@@ -1,8 +1,8 @@
 {
-  "name": "npm-test",
+  "name": "npm-test-njh",
   "version": "2.0.1-0",
   "description": "测试npm包",
-  "main": "lib/index.ts",
+  "main": "lib/index.js",
   "module": "esm/index.js",
   "scripts": {
     "start": "ts-node-dev --respawn --transpile-only src/index.ts",
