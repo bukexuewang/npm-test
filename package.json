@@ -2,11 +2,20 @@
   "name": "npm-test",
   "version": "1.0.0",
   "description": "测试npm包",
-  "main": "index.js",
+  "main": "lib/index.ts",
+  "module": "esm/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build:cjs": "tsc --outDir lib",
+    "build:es": "tsc -m esNext --outDir esm",
+    "build": "rd /s /q lib esm && npm run build:cjs && npm run build:es"
   },
   "keywords": [],
   "author": "dante",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.24",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.6.3"
+  }
 }
