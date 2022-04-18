@@ -8,7 +8,7 @@
     "start": "ts-node-dev --respawn --transpile-only src/index.ts",
     "build:cjs": "tsc --outDir lib",
     "build:es": "tsc -m esNext --outDir esm",
-    "build": "rd /s /q lib esm && npm run build:cjs && npm run build:es"
+    "build": "rm -rf lib esm && npm run build:cjs && npm run build:es"
   },
   "keywords": [],
   "author": "dante",

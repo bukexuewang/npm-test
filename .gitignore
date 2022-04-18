@@ -6,6 +6,8 @@ url.js
 sync.pwd
 src/views/test
 unpackage
+lib
+esm
 
 # local env files
 .env.local
